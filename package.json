@@ -1,0 +1,198 @@
+{
+  "name": "@trdev20/js",
+  "version": "0.1.0",
+  "description": "Collection of JS utilities",
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist",
+    "!dist/**/*.map",
+    "package.json",
+    "README.md",
+    "LICENSE.md",
+    "CHANGELOG.md"
+  ],
+  "scripts": {
+    "script": "tsx .dev/scripts/wrapper.ts",
+    "build": "pnpm script build && tsup",
+    "dev": "pnpm script dev && tsup --watch",
+    "format": "prettier --write .",
+    "ci:format": "prettier --write . --ignore-path .ci.prettierignore",
+    "ci:check-format": "prettier --check . --ignore-path .ci.prettierignore",
+    "publish-pkg": "pnpm build && pnpm publish"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/trdev20/js"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "author": "Taib Rabah",
+  "license": "MIT",
+  "keywords": [
+    "js",
+    "ts",
+    "javascript",
+    "typescript",
+    "utils",
+    "utilities",
+    "helper"
+  ],
+  "devDependencies": {
+    "@changesets/cli": "^2.27.12",
+    "@types/fs-extra": "^11.0.4",
+    "@types/node": "^22.13.0",
+    "fs-extra": "^11.3.0",
+    "jsonc-parser": "^3.3.1",
+    "prettier": "^3.4.2",
+    "prettier-plugin-organize-imports": "^4.1.0",
+    "tsup": "^8.3.6",
+    "tsx": "^4.19.2",
+    "typescript": "^5.7.3"
+  },
+  "exports": {
+    ".": null,
+    "./array": {
+      "require": {
+        "types": "./dist/array.d.ts",
+        "default": "./dist/array.js"
+      },
+      "import": {
+        "types": "./dist/array.d.mts",
+        "default": "./dist/array.mjs"
+      }
+    },
+    "./boolean": {
+      "require": {
+        "types": "./dist/boolean.d.ts",
+        "default": "./dist/boolean.js"
+      },
+      "import": {
+        "types": "./dist/boolean.d.mts",
+        "default": "./dist/boolean.mjs"
+      }
+    },
+    "./index": {
+      "require": {
+        "types": "./dist/index.d.ts",
+        "default": "./dist/index.js"
+      },
+      "import": {
+        "types": "./dist/index.d.mts",
+        "default": "./dist/index.mjs"
+      }
+    },
+    "./mix": {
+      "require": {
+        "types": "./dist/mix.d.ts",
+        "default": "./dist/mix.js"
+      },
+      "import": {
+        "types": "./dist/mix.d.mts",
+        "default": "./dist/mix.mjs"
+      }
+    },
+    "./number": {
+      "require": {
+        "types": "./dist/number.d.ts",
+        "default": "./dist/number.js"
+      },
+      "import": {
+        "types": "./dist/number.d.mts",
+        "default": "./dist/number.mjs"
+      }
+    },
+    "./object": {
+      "require": {
+        "types": "./dist/object.d.ts",
+        "default": "./dist/object.js"
+      },
+      "import": {
+        "types": "./dist/object.d.mts",
+        "default": "./dist/object.mjs"
+      }
+    },
+    "./other": {
+      "require": {
+        "types": "./dist/other.d.ts",
+        "default": "./dist/other.js"
+      },
+      "import": {
+        "types": "./dist/other.d.mts",
+        "default": "./dist/other.mjs"
+      }
+    },
+    "./string": {
+      "require": {
+        "types": "./dist/string.d.ts",
+        "default": "./dist/string.js"
+      },
+      "import": {
+        "types": "./dist/string.d.mts",
+        "default": "./dist/string.mjs"
+      }
+    },
+    "./types": {
+      "require": {
+        "types": "./dist/types/index.d.ts",
+        "default": "./dist/types/index.js"
+      },
+      "import": {
+        "types": "./dist/types/index.d.mts",
+        "default": "./dist/types/index.mjs"
+      }
+    },
+    "./types/array": {
+      "require": {
+        "types": "./dist/types/array.d.ts",
+        "default": "./dist/types/array.js"
+      },
+      "import": {
+        "types": "./dist/types/array.d.mts",
+        "default": "./dist/types/array.mjs"
+      }
+    },
+    "./types/common": {
+      "require": {
+        "types": "./dist/types/common.d.ts",
+        "default": "./dist/types/common.js"
+      },
+      "import": {
+        "types": "./dist/types/common.d.mts",
+        "default": "./dist/types/common.mjs"
+      }
+    },
+    "./types/index": {
+      "require": {
+        "types": "./dist/types/index.d.ts",
+        "default": "./dist/types/index.js"
+      },
+      "import": {
+        "types": "./dist/types/index.d.mts",
+        "default": "./dist/types/index.mjs"
+      }
+    },
+    "./types/object": {
+      "require": {
+        "types": "./dist/types/object.d.ts",
+        "default": "./dist/types/object.js"
+      },
+      "import": {
+        "types": "./dist/types/object.d.mts",
+        "default": "./dist/types/object.mjs"
+      }
+    },
+    "./types/string": {
+      "require": {
+        "types": "./dist/types/string.d.ts",
+        "default": "./dist/types/string.js"
+      },
+      "import": {
+        "types": "./dist/types/string.d.mts",
+        "default": "./dist/types/string.mjs"
+      }
+    }
+  }
+}
